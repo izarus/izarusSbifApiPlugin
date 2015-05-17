@@ -48,7 +48,9 @@ class SbifApi
     curl_setopt($ch, CURLOPT_HEADER,0);
     curl_setopt($ch, CURLOPT_VERBOSE,0);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,FALSE);
-    curl_setopt($ch, CURLOPT_TIMEOUT,30);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+    curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+    curl_setopt($ch, CURLOPT_TIMEOUT,10);
     $result=curl_exec($ch);
     curl_close($ch);
     return $result;
