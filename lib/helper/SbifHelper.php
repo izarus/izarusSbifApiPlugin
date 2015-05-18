@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
     url: '$url',
     type: 'get',
     dataType: 'json',
-    timeout: 3000,
+    timeout: 5000,
     success: function(data){
       if (data.UFs) {
         jQuery('#sbif_uf_actual').text('$'+data.UFs[0].Valor);
@@ -42,7 +42,7 @@ jQuery(document).ready(function(){
     url: '$url',
     type: 'get',
     dataType: 'json',
-    timeout: 3000,
+    timeout: 5000,
     success: function(data){
       if (data.Dolares) {
         jQuery('#sbif_dolar_actual').text('$'+data.Dolares[0].Valor);
@@ -73,7 +73,7 @@ jQuery(document).ready(function(){
     url: '$url',
     type: 'get',
     dataType: 'json',
-    timeout: 3000,
+    timeout: 5000,
     success: function(data){
       if (data.Euros) {
         jQuery('#sbif_euro_actual').text('$'+data.Euros[0].Valor);
@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
     url: '$url',
     type: 'get',
     dataType: 'json',
-    timeout: 3000,
+    timeout: 5000,
     success: function(data){
       if (data.UTMs) {
         jQuery('#sbif_utm_actual').text('$'+data.UTMs[0].Valor);
